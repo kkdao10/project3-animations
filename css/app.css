@@ -1,28 +1,55 @@
 
-/*body
+body
   {
-    background-image: url("/images/background.jpg");
-    background-image: url("/images/background1.jpg");
-      background-color: white;
+  /*  background-image: url("/img/background.jpg");
+  background-image: url("/img/background1.jpg");  */
+      background-color: #A3D6F5;
+      max-width: 1400px;
+      max-height: 1500px;
   }
-*/
+
+.top-bar{
+
+  background-color: #CEEBFB;
+}
+.top-bar-title{
+  text-align: center;
+}
 
 
-h1{font-family: 'Quicksand', sans-serif;}
-h1{color: black}
+
+h1{font-family: 'Poppins', sans-serif;}
+h1{color: black;}
+h1{text-align:center;}
 
 
 
 h2.ridge {border-style: ridge;}
-h2 {font-family: 'Mansalva', cursive;}
+h2 {font-family: 'Josefin Sans', sans-serif;}
 h2{font-size: 50px;}
 h2{color: #3E72B2}
+h2{text-align:center;}
+
 
 
 h3{font-family: 'McLaren', cursive;}
 h3{color: black}
+h3{text-align: center;}
 
 p{font-family: 'Staatliches', cursive;}
+p{color: black;}
+p{text-align:center;}
+
+.frame{
+  height: 500px;
+  width:100%;
+  position: fixed;
+  background-color: white;
+
+}
+
+
+
 
 
 $menu-hover-lines-transition: all 0.35s ease;
@@ -35,6 +62,7 @@ $menu-hover-lines-border-width: 3px;
   font-weight: 500;
   letter-spacing: 1px;
   transition: $menu-hover-lines-transition;
+
 
   li a {
     padding: 0.75rem 0;
@@ -87,78 +115,16 @@ $menu-hover-lines-border-width: 3px;
 
 
 
-/*
-section
- {
-  outline:3px  grey; background: (255,0,0,0.5);
-// border:1px solid red;
-  }
 
 
 
-.center
-   {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-    }
 
-.right
-  {
-    display:block;
-
-
-  }
-
-  button
-  {
-    margin: auto;
-    display:block;
-  }
-  button
-  {
-  padding:16px 32px;
-  font-family:helvetica;
-  font-size:16px;
-  font-weight:100;
-  color:#fff;
-  background: #587286;
-  border:0;
-  font-weight:100;
-  }
-  button:hover
-  {
-  background: #3B5C76;
-  }
-
-
-  .gallery
-  {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 5vw);
-    grid-gap: 110px;
-  }
-
-  button:before {
-  	font-family: FontAwesome;
-  	content:"\f07a";
-  	position: absolute;
-  	top: 11px;
-  	left: -30px;
-  	transition: all 200ms ease;
-  }
-
-  button:hover:before {
-	left: 7px;
-} */
-
-
-
-     #discovery{
+     #discovery
+     {
        height: 100px;
        width: 100px;
+       position: absolute;
+        right: 500px;
        position: relative;
        background: yellow;
        color: red;
@@ -178,56 +144,61 @@ section
      }
 
 
-    /* #box2
-     {
-       border: 1px solid white;
-      width: 100px;
-      height: 100px;
-      position:absolute;
-      top:350px;
-      left:200px;
-      background: blue;
-      transition:all 1s linear; <!-- the transition animation that happens -->
-      z-index: -10;
 
-
-      }
-
-     #box2:hover
-          {
-        right: 40px;
-
-          } */
-
-
-
- #box3
-{
-  width:100px;
+ #box2{
+  width: 100px;
   height: 100px;
-  background-color: green;
-  left: 200px;
+  background-color: red;
   position: relative;
-  animation-name:forward;
-  animation-duration: 2s;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+  animation-direction: reverse;
+}
 
+/* Standard syntax */
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
 }
-}
-@keyframes forward
-{
-  25% {
-    right:100px bottom:50px;
-  }
-  50% {
-    left:200px; top:200px;
-  }
-  75% {
-    left:0px; top:200px;
-  }
-  100% {
-    left:0px; top:0px;
-  }
-}
+
+
+
+ #box3{
+   width: 200px;
+   right: 100px;
+   height: 100px;
+   background-color: red;
+   position: relative;
+   -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+   -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+   -webkit-animation-iteration-count: 2; /* Safari 4.0 - 8.0 */
+   -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+   animation-name: example;
+   animation-duration: 4s;
+   animation-iteration-count: 2;
+   animation-direction: alternate;
+ }
+
+
+ /* Standard syntax */
+ @keyframes example {
+   0%   {background-color:red; right:0px; top:0px;}
+   25%  {background-color:yellow; right:200px; top:0px;}
+   50%  {background-color:blue; right:200px; top:200px;}
+   75%  {background-color:green; right:0px; top:200px;}
+   100% {background-color:red; right:0px; top:0px;}
+ }
+
+
+
+
+
 
 #box4
 {
@@ -259,6 +230,32 @@ section
     left:0px; top:0px;
   }
 }
+
+
+
+
+#box5{
+  width: 400px;
+  height: 400px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:100px; top:100px;}
+  50%  {background-color:blue; left:200px; top:400px;}
+  75%  {background-color:green; left:400px; top:600px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+
 
 
 
@@ -347,6 +344,7 @@ width: 300px;
        -ms-transform: translateX(-100%);
            transform: translateX(-100%);
    overflow-y: auto;
+  /* opacity:0.5; */
  }
 
  [data-whatinput='mouse'] .offcanvas-full-screen {
@@ -481,3 +479,84 @@ width: 300px;
  @keyframes play {
        100% {background-position:-1900px;}
      }
+
+
+
+
+  /* css for floating  block animation */
+
+.introduction
+{
+  border: 2px solid white;
+  margin-top: 10px;
+  position:relative;
+  height:200px;
+  width:100%;
+  /*background:white; */
+  /* background-image: url("/images/wave.jpg") */
+  background-color: grey;
+  animation: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+opacity: 0.7;
+
+}
+
+
+
+  .floating
+  {
+    animation: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+  }
+
+
+
+
+
+  @keyframes floating
+    {
+        from { transform: translate(0,0px;)}
+        65% {transform:translate(0,20px);}
+        to {transform:translate(0,=0px);}
+    }
+
+
+
+    #footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       background-color: #CEEBFB;
+       color: white;
+       text-align: center;
+    }
+
+
+
+    #slide-left
+    {
+      width:100%;
+      margin-top:-10%;
+      position:absolute;
+      overflow:hidden;
+      /*border:2px solid black; */
+      animation: 10s slideinleft;
+    }
+
+  @keyframes slideinleft
+  {
+    from {
+      margin-left: -100%;
+
+    }
+    to {
+      margin-left: 0%;
+
+    }
+  }
